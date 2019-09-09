@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "publisher_package/topic_name.h"
 /**
 * This tutorial demonstrates simple receipt of messages over the ROS system.
 */
@@ -47,7 +48,7 @@ If messages are arriving faster than they are being processed, this
 * is the number of messages that will be buffered up before beginning to throw
 * away the oldest ones.
 */
-ros :: Subscriber sub = n . subscribe ( "publisher_topic" , 1000 , chatterCallback );
+ros :: Subscriber sub = n . subscribe ( "topic_name" , 1000 , chatterCallback );
 /**
 * ros::spin() will enter a loop, pumping callbacks.
 With this version, all
